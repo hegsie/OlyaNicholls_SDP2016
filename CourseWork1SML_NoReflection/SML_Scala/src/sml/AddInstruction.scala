@@ -10,7 +10,7 @@ class AddInstruction(label: String, op: String, val result: Int, val op1: Int, v
   extends Instruction(label, op) {
 
   override def execute(m: Machine) {
-    println(this)
+    println(this) // added this line, so when the program executes, we can see what exactly has been done
     val value1 = m.regs(op1)
     val value2 = m.regs(op2)
     m.regs(result) = value1 + value2
