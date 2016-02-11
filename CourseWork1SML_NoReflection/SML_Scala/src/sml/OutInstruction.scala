@@ -1,5 +1,0 @@
-package sml
-
-class OutInstruction {
-
-}
