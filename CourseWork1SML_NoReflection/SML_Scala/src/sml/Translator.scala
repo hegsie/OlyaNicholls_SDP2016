@@ -51,4 +51,5 @@ object Translator {
 
   def apply(file: String) =
     new Translator(directory + file)
+    //new Translator( file)
 }
