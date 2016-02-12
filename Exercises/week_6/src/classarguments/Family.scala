@@ -7,13 +7,13 @@ import AtomicScala.AtomicTest1._
   */
 class Family(famMember:String*){
 
-  def familySize(): Int = {
-    var count = 0
-    for(item <- famMember){
-      count += 1
-    }
-    count
-  }
+def familySize(): Int = {
+var count = 0
+for(item <- famMember){
+count += 1
+}
+count
+}
 }
 
 object TestArgs extends App {
