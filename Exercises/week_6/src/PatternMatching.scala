@@ -21,4 +21,28 @@ object PatternMatching extends App{
     forecast(0) is "Cloudy"
     forecast(15) is "Unknown"
 
+
+  val sunnyData = Vector(100, 80, 50, 20, 0, 15)
+
+  for(num <- sunnyData) {
+    println("Today's forecast is " + num + " which means " + forecast(num))
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
