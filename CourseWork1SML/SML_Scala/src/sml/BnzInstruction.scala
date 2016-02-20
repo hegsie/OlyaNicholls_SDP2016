@@ -17,6 +17,16 @@ extends Instruction(label, op){
   override def toString(): String = {
     super.toString + " " + op1 + " moving execution to " + goTolabel
   }
+
+
+
+
+
+
+
+
+
+
 }
 
 object BnzInstruction {

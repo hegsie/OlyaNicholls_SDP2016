@@ -17,6 +17,7 @@ case class Machine(labels: Labels, prog: Vector[Instruction]) {
   def execute(start: Int) =
     start.until(prog.length).foreach(x => prog(x) execute this)
 
+
   def seqId(label: String): Int = {
     val filtered = prog.filter((p: Instruction) => p.getLabel()==label)
     if (filtered.length > 1)
@@ -25,6 +26,9 @@ case class Machine(labels: Labels, prog: Vector[Instruction]) {
       throw new Exception("No copies of the label found")
     prog.indexOf(filtered.last)
   }
+
+
+
 }
 
 object Machine extends App {
@@ -39,6 +43,7 @@ object Machine extends App {
     //println(m)
     println("Beginning program execution.")
     m.execute(0)
+    println("")
     println("Ending program execution.")
     println("Values of registers at program termination:")
     println(m.regs + ".")
