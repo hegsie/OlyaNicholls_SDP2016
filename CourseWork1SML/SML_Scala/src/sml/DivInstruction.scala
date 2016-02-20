@@ -21,7 +21,7 @@ class DivInstruction (label: String, op: String, val result: Int, val op1: Int, 
   }
 
   override def toString(): String = {
-    super.toString + "  value in reg " + op1 + " / by value in reg  " + op2 + "  put result in reg  " + result
+    super.toString + " value in reg " + op1 + " / by value in reg  " + op2 + "  put result in reg  " + result
   }
 }
 
