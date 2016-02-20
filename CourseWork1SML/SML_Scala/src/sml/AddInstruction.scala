@@ -1,23 +1,19 @@
 package sml
 
-/**
-  * This class ....
-  *
-  * @author someone
-  */
 
 class AddInstruction(label: String, op: String, val result: Int, val op1: Int, val op2: Int)
   extends Instruction(label, op) {
 
   override def execute(m: Machine) {
-    println(this) // added this line, so when the program executes, we can see what exactly has been done
+    println(this) // added this line, so when the program executes, we can see what exactly has been done ( instruction executed)
+    // because it would basically print out the toString method that we specify below
     val value1 = m.regs(op1)
     val value2 = m.regs(op2)
     m.regs(result) = value1 + value2
   }
 
   override def toString(): String = {
-    super.toString + " " + op1 + " + " + op2 + " to " + result
+    super.toString + " value in reg " + op1 + " + value in reg " + op2 + " put result in reg " + result
   }
 }
 

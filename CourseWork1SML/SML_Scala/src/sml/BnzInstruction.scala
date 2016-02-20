@@ -1,5 +1,8 @@
 package sml
 
+
+
+
 class BnzInstruction(label: String, op: String, val op1: Int, goTolabel: String)
 extends Instruction(label, op){
   override def execute(m: Machine) {
