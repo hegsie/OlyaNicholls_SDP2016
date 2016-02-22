@@ -14,8 +14,20 @@ case class Machine(labels: Labels, prog: Vector[Instruction]) {
 
   // Execute the program in prog, beginning at instruction 0.
   // Precondition: the program and its labels have been store properly.
-  def execute(start: Int) =
-    start.until(prog.length).foreach(x => prog(x) execute this)
+
+
+  // Execute the program in prog, beginning at instruction 0.
+  // Precondition: the program and its labels have been store properly.
+  def execute(start: Int, end: Int) = {
+    for (x <- start to end) {
+      prog(x) execute this
+    }
+  }
+
+
+
+
+  // start.until(prog.length).foreach(x => prog(x) execute this)
 
 
   def seqId(label: String): Int = {
@@ -26,7 +38,6 @@ case class Machine(labels: Labels, prog: Vector[Instruction]) {
       throw new Exception("No copies of the label found")
     prog.indexOf(filtered.last)
   }
-
 
 
 }
@@ -42,7 +53,7 @@ object Machine extends App {
     println("Here is the program; it has " + m.prog.size + " instructions.")
     //println(m)
     println("Beginning program execution.")
-    m.execute(0)
+    m.execute(0, m.prog.size-1)
     println("")
     println("Ending program execution.")
     println("Values of registers at program termination:")

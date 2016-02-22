@@ -10,7 +10,7 @@ extends Instruction(label, op){
     val value1 = m.regs(op1)
     if (value1 != 0) {
       val id = m.seqId(goTolabel)
-      m.execute(id)
+      m.execute(id,m.seqId(label) )
     }
   }
 
