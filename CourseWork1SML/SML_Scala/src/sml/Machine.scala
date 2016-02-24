@@ -24,21 +24,7 @@ case class Machine(labels: Labels, prog: Vector[Instruction]) {
     }
   }
 
-
-
-
   // start.until(prog.length).foreach(x => prog(x) execute this)
-
-
-  def seqId(label: String): Int = {
-    val filtered = prog.filter((p: Instruction) => p.getLabel()==label)
-    if (filtered.length > 1)
-      throw new Exception("Too many copies of the same label")
-    if (filtered.length < 1)
-      throw new Exception("No copies of the label found")
-    prog.indexOf(filtered.last)
-  }
-
 
 }
 

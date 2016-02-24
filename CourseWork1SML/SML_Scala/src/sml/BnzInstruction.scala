@@ -9,8 +9,8 @@ extends Instruction(label, op){
     println(this)
     val value1 = m.regs(op1)
     if (value1 != 0) {
-      val id = m.seqId(goTolabel)
-      m.execute(id,m.seqId(label) )
+      val id = seqId(goTolabel, m)
+      m.execute(id,seqId(label, m) )
     }
   }
 
@@ -20,10 +20,14 @@ extends Instruction(label, op){
 
 
 
-
-
-
-
+  def seqId(label: String, m: Machine): Int = {
+    val filtered = m.prog.filter((p: Instruction) => p.getLabel()==label)
+    if (filtered.length > 1)
+      throw new Exception("Too many copies of the same label")
+    if (filtered.length < 1)
+      throw new Exception("No copies of the label found")
+    m.prog.indexOf(filtered.last)
+  }
 
 
 
