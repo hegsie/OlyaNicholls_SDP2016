@@ -26,6 +26,39 @@ object MapAndReduce2 extends App{
 
   v1.result() is Vector(2, 3, 4, 5)
 
+/*
+Rewrite the following code:
+using for loops.
+
+ */
+
+  val v2 = Vector(1, 10, 100, 1000)
+  v2.reduce((sum, n) => sum + n) is 1111
+
+ var  sum = 0
+  for (num <- v2){
+    sum += num
+  }
+
+  sum is 1111
+
+/*
+. Use reduce to implement a method sumIt that takes a variable argument list and
+sums those arguments.
+ */
+
+  def sumIt(num: Int*): Int = {
+
+    num.reduce((sum, n) => sum + n)
+  }
+
+  sumIt(1,2,3) is 6
+  sumIt(45, 45, 45, 60) is 195
+
+
+
+
+
 
 
 
