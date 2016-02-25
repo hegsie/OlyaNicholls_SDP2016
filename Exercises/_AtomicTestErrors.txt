@@ -1,0 +1,96 @@
+()[Error] expected:
+Sunny
+()[Error] expected:
+Mostly Sunny
+()[Error] expected:
+Partly Sunny
+()[Error] expected:
+Mostly Sunny
+()[Error] expected:
+Cloudy
+()[Error] expected:
+Unknown
+Mostly Cloudy[Error] expected:
+Mostly Sunny
+4[Error] expected:
+1
+()[Error] expected:
+4
+()[Error] expected:
+20
+()[Error] expected:
+21
+()[Error] expected:
+4
+()[Error] expected:
+20
+()[Error] expected:
+21
+()[Error] expected:
+Earl Grey
+()[Error] expected:
+Lemon Zinger decaf
+Earl Grey [Error] expected:
+Earl Grey
+Earl Grey [Error] expected:
+Earl Grey
+Earl Grey [Error] expected:
+Earl Grey
+Earl Grey [Error] expected:
+Earl Grey
+Lemon Zingerdecaf decaf [Error] expected:
+Lemon Zinger decaf
+Earl Grey [Error] expected:
+Earl Grey
+Lemon Zinger decaf decaf[Error] expected:
+Lemon Zinger decaf
+Lemon Zinger decaf decaf[Error] expected:
+Lemon Zinger decaf
+Jasmine Green sugar[Error] expected:
+Jasmine Green + sugar
+List(Vector(10.0, 20.0))[Error] expected:
+List(10.0, 20.0)
+List(Vector(1.0, 2.0, 3.0))[Error] expected:
+List(1.0, 2.0, 3.0)
+Vector(1, 2, 3, 4)1234[Error] expected:
+1234
+1.0,2.0,3.0,4.0,[Error] expected:
+1,2,3,4,
+100[Error] expected:
+70
+[Error] expected:
+7 35 49 56 
+ [Error] expected:
+7 35 49 56 
+1 4 9 16 [Error] expected:
+1 4 25 9 49 
+1 4 9 16 [Error] expected:
+1 4 25 9 49 
+1 4 9 16 [Error] expected:
+1 4 25 9 49 
+()[Error] expected:
+Vector(21, 32, 43, 54)
+()[Error] expected:
+Vector(21, 32, 43, 54)
+()[Error] expected:
+Vector(21, 32, 43, 54)
+()[Error] expected:
+Vector(21, 32, 43, 54)
+()[Error] expected:
+Vector(21, 32, 43, 54)
+()[Error] expected:
+Vector(21, 32, 43, 54)
+Vector()[Error] expected:
+Vector(21, 32, 43, 54)
+Vector()[Error] expected:
+Vector(21, 32, 43, 54)
+scala.collection.immutable.VectorBuilder@2f7a2457[Error] expected:
+Vector(21, 32, 43, 54)
+scala.collection.immutable.VectorBuilder@2f7a2457[Error] expected:
+Vector(21, 32, 43, 54)
+scala.collection.immutable.VectorBuilder@2f7a2457[Error] expected:
+Vector(21, 32, 43, 54)
+()[Error] expected:
+Vector(21, 32, 43, 54)
+scala.collection.immutable.VectorBuilder@2f7a2457[Error] expected:
+Vector(2, 3, 4, 5)
