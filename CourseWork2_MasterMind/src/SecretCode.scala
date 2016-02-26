@@ -11,13 +11,16 @@ class SecretCode {
   var colours = List[String]("B", "G", "Y", "O", "P", "R")
   var code = new ListBuffer[String]
 
-  def generateCode() = {
+
+  def generateCode: List[String] = {
     for (i <- Range(0,4)){
       import scala.util.Random
 
       code = code :+ colours(Random.nextInt(5))
+
     }
-    println(code)
+    val finalcode = code.result()
+    finalcode
 
 
     }
@@ -27,7 +30,7 @@ class SecretCode {
 object Test extends App{
 
   val sc = new SecretCode
-  sc.generateCode()
+  println(sc.generateCode)
 
 
 }
