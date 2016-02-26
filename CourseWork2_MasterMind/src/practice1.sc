@@ -11,16 +11,18 @@ y
 y
 y
 
-val l  = List("A", "B", "C", "D")
+val l  = List("A", "B", "C")
 
-var code = new ListBuffer[String]()
+val t = List("A", "Z", "C")
 
-
-//var myVector = ListBuffer[Int]()
-
-//var myVector = new VectorBuilder[Int]()
-for (num <- x) {
-  code += *11+10)
+for (i <- t) {
+  if (l.contains(i)) {
+    if (t.indexOf(i) == l.indexOf(i)) {
+      println("black")
+    } else {
+      println("white")
+    }
+  }
 
 }
 
