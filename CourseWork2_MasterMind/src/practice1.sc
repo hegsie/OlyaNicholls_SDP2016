@@ -26,5 +26,52 @@ for (i <- t) {
 
 }
 
+val z = Vector[Int](1,2,3)
+
+val p = Vector[String](". " * 4)
+val a = z(2)
+
+
+val m = List[String]("A", "B", "Z")
+m.length
+m.toString()
+m.mkString(", ")
+
+import scala.collection.mutable.ArrayBuffer
+
+def grid() = {
+  var gamefield = ArrayBuffer[Vector[String]]()
+  for (i <- Range(0,12)) {
+    gamefield :+ Vector[String](". " * 4)
+  }
+  gamefield.result()
+
+}
+
+
+val v = Vector(1, 2, 3, 4)
+val ar = v.map(n => List("."*4).mkString(""))
+
+for(i <-ar){println(i, "\n")}
+
+
+
+//////////////////////////////////////////
+
+
+
+import scala.io.StdIn.readLine
+
+object userInputTaker {
+
+  val input = readLine("Please enter your guess :  ")
+
+  println(s"your input is $input, thanks ")
+
+}
+
+val user = userInputTaker
+
+
 
 

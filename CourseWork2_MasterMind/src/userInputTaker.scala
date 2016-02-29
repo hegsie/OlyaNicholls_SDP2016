@@ -1,12 +1,15 @@
 /**
-  * Created by ONicholls on 26/02/2016.
+  * Created by ONicholls on 29/02/2016.
   */
 
 import scala.io.StdIn.readLine
 
-object practice extends App{
+object userInputTaker extends App{
+
+  var userguessesCount = 0
 
   val input = readLine("Please enter a number:  ")
   println(s"your input is $input, thanks ")
+
 
 }

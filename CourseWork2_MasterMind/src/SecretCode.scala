@@ -18,7 +18,7 @@ class SecretCode {
 
 
 
-  def generateCode: List[String] = {
+  def generateCode: List[String] = { //do we want it to return a string?
     for (i <- Range(0,4)){
       import scala.util.Random
 
@@ -33,7 +33,7 @@ class SecretCode {
     }
 
 
-  def checkingCode(code: List, guess: List): String = {
+  def checkingCode(code: List[String], guess: List[String]): String = {
     var pegInfo = new ListBuffer[String]
     for (item <- guess) {
       if (code.contains(item)) {
@@ -45,7 +45,7 @@ class SecretCode {
       }
     }
 
-    pegInfo.result().toString()
+    (pegInfo.result()).mkString(", ")    // instead of toString
 
 
   }
@@ -56,9 +56,11 @@ object Test extends App{
   val sc = new SecretCode
   val z = sc.generateCode
 
+
+
   val guess5 = List[String]("Y", "O", "P", "R")
 
-  sc.checkingCode(z, guess5)
+  println(sc.checkingCode(z, guess5))
 
 
 
