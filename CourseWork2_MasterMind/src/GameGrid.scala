@@ -23,20 +23,19 @@ class GameGrid {
     }
   }
 
-
   def insertGuess(index: Int, guess: String) = {
-    gridRows.
-
+    gridRows.updated(index,guess)
 
   }
 
 }
 
+
 object Grid extends App{
 
   val g = new GameGrid
-  println(g.grid)
-  //println(g.gridRows)
+  //println(g.grid)
+  println(g.gridRows)
 //  val list = List[String](". . . .", ". . . .", ". . . .")
 //  g.printgrid(list)
 //  println()
@@ -44,7 +43,7 @@ object Grid extends App{
 //
 //  println(g.gridRows)
 //
- println(g.insertGuess("ABCD", 1))
+  println(g.insertGuess( 5, "ABCD"))
 //
 
 
