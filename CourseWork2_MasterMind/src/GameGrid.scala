@@ -43,7 +43,9 @@ object Grid extends App{
 //
 //  println(g.gridRows)
 //
-  println(g.insertGuess( 5, "ABCD"))
+  val user = userInputTaker
+
+  println(g.insertGuess(2, "ABCD"))
 //
 
 
