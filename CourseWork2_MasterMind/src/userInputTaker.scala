@@ -4,28 +4,22 @@
 
 import scala.io.StdIn.readLine
 
-class userInputTaker {
+object userInputTaker extends App{
 
   //var userguessesCount = 0
 
-  val input = readLine("Please enter a number:  ")
-  println(s"your input is $input, thanks ")
-
-  def sendinput
 
 
+  def sendInput() = {
+    import scala.io.StdIn.readLine
 
-  //def signal(): String = {new Flare().light()}
+    val input = readLine("Please enter a number:  ")
+    println(s"your input is $input, thanks ")
 
+    input
 
+  }
 
-
-
-}
-
-
-object userInputTaker {
-   def apply() = new userInputTaker
 
 }
 

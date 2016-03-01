@@ -1,20 +1,23 @@
 /**
   * Created by ONicholls on 28/02/2016.
   */
-import scala.collection.mutable._
+
 
 class GameGrid {
 
-  import scala.collection.mutable
+
 
   println("Generating a secret code ....")
   var grid: List[Int] = List.range(1,13)
+  var guessCounter: Int = 0
 
 
   def gridRows = {
 
-    var Rows = grid.map(num => ". " *4)
+    val Rows = grid.map(num => ". " *4)
     Rows
+
+
   }
 
   def printgrid(listofrows:List[String]) = {
@@ -23,9 +26,14 @@ class GameGrid {
     }
   }
 
-  def insertGuess(index: Int, guess: String) = {
-    gridRows.updated(index,guess)
+  def insertGuess(lst: List[String], index: Int, guess: String) = {
+    lst.updated(index,guess)
 
+
+  }
+
+  def updateCount() = {
+    guessCounter += 1
   }
 
 }
@@ -33,20 +41,19 @@ class GameGrid {
 
 object Grid extends App{
 
+  def apply  = new GameGrid
   val g = new GameGrid
-  //println(g.grid)
-  println(g.gridRows)
-//  val list = List[String](". . . .", ". . . .", ". . . .")
-//  g.printgrid(list)
-//  println()
-//  //println(g.gridRows(5))
-//
-//  println(g.gridRows)
-//
-  val user = userInputTaker
+  var UpdateGrid = g.gridRows
 
-  println(g.insertGuess(2, "ABCD"))
-//
+  g.printgrid(UpdateGrid)
+  val userI = userInputTaker
+
+
+  UpdateGrid = g.insertGuess(this.UpdateGrid, g.guessCounter, userI.sendInput())
+  g.updateCount()
+  g.printgrid(UpdateGrid)
+  UpdateGrid = g.insertGuess(this.UpdateGrid,g.guessCounter, userI.sendInput())
+  g.printgrid(UpdateGrid)
 
 
 
