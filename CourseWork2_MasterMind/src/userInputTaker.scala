@@ -1,6 +1,4 @@
-/**
-  * Created by ONicholls on 29/02/2016.
-  */
+
 
 import scala.io.StdIn.readLine
 

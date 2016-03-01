@@ -1,6 +1,5 @@
-/**
-  * Created by ONicholls on 25/02/2016.
-  */
+
+
 abstract class GameAbstractImpl extends Game {
   private var showCode: Boolean = false
 

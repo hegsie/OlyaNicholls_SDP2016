@@ -1,11 +1,11 @@
-/**
-  * Created by ONicholls on 26/02/2016.
-  */
+
 
 
 import scala.collection.mutable.ListBuffer
 
 class SecretCode {
+
+
 
 
   var colours = List[String]("B", "G", "Y", "O", "P", "R")
