@@ -1,5 +1,4 @@
-package atomicscala
-
+package AtomicScala
 /**
   * Created by ONicholls on 18/02/2016.
   */

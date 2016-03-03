@@ -1,6 +1,6 @@
 package classarguments
 
-import AtomicScala.AtomicTest1._
+import AtomicScala.AtomicTest._
 
 /**
   * Created by ONicholls on 12/02/2016.

@@ -1,7 +1,7 @@
 /**
   * Created by ONicholls on 12/02/2016.
   */
-import AtomicScala.AtomicTest1._
+import AtomicScala.AtomicTest._
 
 object SquareAndSum extends App {
 

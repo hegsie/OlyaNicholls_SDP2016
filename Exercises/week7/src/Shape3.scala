@@ -42,6 +42,6 @@ class Sq (side1: Double, side2:Double )extends R (side1, side2){
 }
 
 case class Draw (shape: Any) {
-  def apply(shape:Any)
+//  def apply(shape:Any)
 
 }

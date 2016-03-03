@@ -1,6 +1,6 @@
 package caseclass
 
-import AtomicScala.AtomicTest1._
+import AtomicScala.AtomicTest._
 /**
   * Created by ONicholls on 17/02/2016.
   */

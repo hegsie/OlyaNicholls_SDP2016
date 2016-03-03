@@ -1,5 +1,5 @@
 package constructors
-import AtomicScala.AtomicTest1._
+import AtomicScala.AtomicTest._
 
 
 class Tea (val milk: Boolean = false,
