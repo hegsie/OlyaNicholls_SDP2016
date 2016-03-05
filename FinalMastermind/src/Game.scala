@@ -9,7 +9,7 @@ trait Game {
 
   println("Welcome to Mastermind")
 
-  var gr  = new Grid
+  val gr  = new Grid
 
   val secretcode = GameCode
   var win = false
@@ -25,7 +25,9 @@ trait Game {
 
     if(win == false){
       while(count < 12){
-        gr.insertGuess(gr.grid, gr.guessCounter,UserGuess.sendInput())
+        gr.insertGuess(gr.guessCounter,UserGuess.sendInput())
+
+
         gr.printgrid(gr.grid)
       }
     }

@@ -21,8 +21,10 @@ class Grid {
     }
   }
 
-  def insertGuess(grid:List[String], index: Int, guess: String) = {
-    grid.updated(index,guess)
+  def insertGuess(index: Int, guess: String) = {
+    grid = grid.updated(index,guess)
+    updateCount()
+
   }
 
   def updateCount() = {
