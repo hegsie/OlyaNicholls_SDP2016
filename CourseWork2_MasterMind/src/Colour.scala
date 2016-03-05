@@ -1,13 +1,12 @@
-/**
-  * Created by ONicholls on 01/03/2016.
-  */
+///**
+//  * Created by ONicholls on 01/03/2016.
+//  */
 //
-//object GameColour {
+//
 //
 //  sealed trait Colour {
-//    override def toString(): String
+//  override def toString(): String
 //
-//  }
 //
 //  case object Blue extends Colour {
 //    override def toString(): String = "B"
@@ -30,14 +29,12 @@
 //  }
 //
 //  case object Yellow extends Colour {
-//    override def toString(): String= "Y"
+//    override def toString(): String = "Y"
+//
+//
 //  }
 //
 //}
-
-trait Blue{override def toString(): String = "B"}
-trait Red{override def toString(): String = "R"}
-trait Green {override def toString(): String = "G"}
-
-object COL extends Blue with Red //with Green
-
+//
+//
+//
