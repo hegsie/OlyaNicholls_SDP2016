@@ -1,6 +1,6 @@
 
 
-abstract class GameAbstractImpl extends Game {
+abstract class TheGame extends Game {
   private var showCode: Boolean = false
 
   /**
