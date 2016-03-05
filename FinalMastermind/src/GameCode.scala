@@ -22,11 +22,13 @@ class GameCode {
 
 }
 
-  object dvjfvbj extends App{
+  object GameCode {
 
-    val sc = new GameCode
-    val sctest = sc.generateCode
-
-    println(sctest)
+    def apply  = new GameCode
+//
+//    val sc = new GameCode
+//    val sctest = sc.generateCode
+//
+//    println(sctest)
 
 }

@@ -1,6 +1,6 @@
 
 
-abstract class TheGame extends Game {
+class TheGame extends Game {
   private var showCode: Boolean = false
 
   /**

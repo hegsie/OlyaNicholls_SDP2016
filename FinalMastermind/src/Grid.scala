@@ -1,42 +1,37 @@
-//
-//
-//
-//class GameGrid {
-//
-//
-//
-//  println("Generating a secret code ....")
-//  var grid: List[Int] = List.range(1,13)
-//  var guessCounter: Int = 0
+/**
+  * Created by ONicholls on 05/03/2016.
+  */
+class Grid {
+
+
+  var grid: List[String] = List.range(1,13).map(num => ". " *4)
+  var guessCounter: Int = 0
+
 //
 //
 //  def gridRows = {
 //
 //    val Rows = grid.map(num => ". " *4)
 //    Rows
-//
-//
 //  }
-//
-//  def printgrid(listofrows:List[String]) = {
-//    for (row <- listofrows){
-//      println(row)
-//    }
-//  }
-//
-//  def insertGuess(lst: List[String], index: Int, guess: String) = {
-//    lst.updated(index,guess)
-//
-//
-//  }
-//
-//  def updateCount() = {
-//    guessCounter += 1
-//  }
-//
-//}
-//
-//
+
+  def printgrid(listofrows:List[String]) = {
+    for (row <- listofrows){
+      println(row)
+    }
+  }
+
+  def insertGuess(grid:List[String], index: Int, guess: String) = {
+    grid.updated(index,guess)
+  }
+
+  def updateCount() = {
+    guessCounter += 1
+  }
+
+}
+
+
 //object Grid extends App{
 //
 //  def apply  = new GameGrid
@@ -53,7 +48,6 @@
 //  UpdateGrid = g.insertGuess(this.UpdateGrid,g.guessCounter, userI.sendInput())
 //  g.printgrid(UpdateGrid)
 //
-//
-//
-//
-//}
+
+
+

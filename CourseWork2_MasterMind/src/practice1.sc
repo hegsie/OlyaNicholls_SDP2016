@@ -75,3 +75,20 @@
 
 /////////////////////////////////////
 
+
+object EmptyGrid {
+
+  var grid: List[Int] = List.range(1,13)
+
+
+  def gridRows = {
+
+    val Rows = grid.map(num => ". " *4)
+    Rows
+  }
+
+  gridRows
+
+}
+
+
