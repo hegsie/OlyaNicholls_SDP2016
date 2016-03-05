@@ -4,9 +4,9 @@
 
 import scala.collection.mutable.ListBuffer
 
-class Pegs {
+trait Pegs {
 
-  def checkingCode(code: List[String], guess: List[String]): String = {
+  def checkingCode(code: String, guess: String): String = {
 
     var pegInfo = new ListBuffer[String]
     for (item <- guess) {

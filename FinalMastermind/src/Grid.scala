@@ -1,11 +1,12 @@
 /**
   * Created by ONicholls on 05/03/2016.
   */
-class Grid {
+class Grid extends GameCode with Pegs{
 
 
   var grid: List[String] = List.range(1,13).map(num => ". " *4)
   var guessCounter: Int = 0
+
 
 //
 //
@@ -17,14 +18,18 @@ class Grid {
 
   def printgrid(listofrows:List[String]) = {
     for (row <- listofrows){
-      println(row)
+      if(row.equals(". . . . ")) {
+        println(row)
+      } else {
+        println(row + checkingCode(code ,row))
+      }
+
     }
   }
 
   def insertGuess(index: Int, guess: String) = {
     grid = grid.updated(index,guess)
     updateCount()
-
   }
 
   def updateCount() = {

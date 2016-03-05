@@ -10,9 +10,12 @@ trait Game {
   println("Welcome to Mastermind")
 
   val gr  = new Grid
+  val gc = new GameCode
+  val secretcode = gc.code
 
-  val secretcode = GameCode
   var win = false
+
+
 
   def runGames = {
 
@@ -25,8 +28,8 @@ trait Game {
 
     if(win == false){
       while(count < 12){
-        gr.insertGuess(gr.guessCounter,UserGuess.sendInput())
-
+        val guess = UserGuess.sendInput()
+        gr.insertGuess(gr.guessCounter,guess)
 
         gr.printgrid(gr.grid)
       }
