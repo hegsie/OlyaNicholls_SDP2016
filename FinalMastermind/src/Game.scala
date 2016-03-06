@@ -10,7 +10,7 @@ trait Game {
     */
 
   println()
-  println("#"*15 + " Welcome to Mastermind ".toUpperCase() + "#"*15)
+  println("*"*20 + " Welcome to Mastermind ".toUpperCase() + "*"*20)
   println()
   println("RULES")
   println(" " +"-"*100)
