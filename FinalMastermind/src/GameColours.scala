@@ -26,9 +26,9 @@ object GameColours {
 
 }
 
-object test extends App{
-
-  println(GameColours.gcol)
-
-}
-
+//object test extends App{
+//
+//  println(GameColours.gcol)
+//
+//}
+//
