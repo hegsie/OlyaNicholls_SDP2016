@@ -27,7 +27,10 @@ object UserGuess {
         if(pass.result().length  == 4){
           input = takeinput
           input_correct = true
-        } else {println("Every single character of your code must be a letter. Try again")}
+        } else {
+          println("Every single character of your code must be a letter. Try again")
+          println()
+        }
 
       }
 
