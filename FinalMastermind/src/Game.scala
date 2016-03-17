@@ -34,13 +34,6 @@ trait Game {
   println()
 
 
-
-
-
-
-
-
-
   val gr  = new Grid
   val gc = new GameCode
   //val secretcode = gc.code
@@ -50,7 +43,7 @@ trait Game {
 
 
   def runGames() = {
-    gr.printgrid(gr.grid)
+    gr.printgrid()
     gameflow()
   }
 
@@ -61,7 +54,7 @@ trait Game {
     while(!Win && gr.guessCounter < 12){
       val guess = UserGuess.sendInput()
       gr.insertGuess(gr.guessCounter,guess)
-      gr.printgrid(gr.grid)
+      gr.printgrid()
       println("")
       if (gr.lastPegs == "Black Black Black Black") {
         Win = true
@@ -75,7 +68,6 @@ trait Game {
     }
 
   }
-
 
 
 }

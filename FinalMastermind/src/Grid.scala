@@ -4,46 +4,55 @@
   */
 
 
+
+
 class Grid extends GameCode with Pegs{
 
+  import scala.collection.mutable.ListBuffer
+
   val secretCode = code
-  var grid: List[String] = List.range(1,13).map(num => "." *4)  // TAKE OUT THE SPACE
+  var grid = Array.fill(12){new ListBuffer[Colour]}
   var guessCounter: Int = 0
   var lastPegs: String = ""
-  var codeString = "...."
+  val elementsString = "...."
+  var codestring = new ListBuffer[Colour]
 
+  def stringify(row: ListBuffer[Colour]) = row.result().mkString
 
-
-  def printgrid(listofrows:List[String]) = {
-    println(codeString + " Secret Code")
-    for (row <- listofrows){
-      if(row.equals("....")) {
-        println(row)
+  def printgrid() = {
+    if(codestring.size > 0) {println(stringify(codestring) + " Secret Code")
+    } else {println(elementsString + " Secret Code")}
+    for (row <- grid){
+      if(row.length == 0) {
+        println(elementsString)
       } else {
         val check = checkingCode(secretCode,row)
         lastPegs = check
         if (check.length() > 0) {
-          println(row + " result: " + check)
+          println(stringify(row) + " result: " + check)
         } else {
-          println(row + " result: No Pegs")
+          println(stringify(row) + " result: No Pegs")
         }
       }
     }
   }
 
-  def insertGuess(index: Int, guess: String) = {
-    grid = grid.updated(index,guess)
+  def insertGuess(index: Int, guess: ListBuffer[Colour]) = {
+    grid.update(index,guess)
     updateCount()
   }
 
   def updateCount() = {
     guessCounter += 1
   }
+
+
+
+
 }
 
-object Grid extends App {
-  def apply = new Grid
-}
+
+
 
 
 

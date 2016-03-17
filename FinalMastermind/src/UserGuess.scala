@@ -3,42 +3,58 @@ import scala.collection.mutable.ListBuffer
 
 object UserGuess {
 
-  def sendInput() = {
+  def sendInput(): ListBuffer[Colour] = {
 
     println()
     println("Please enter your guess to crack the secret code")
     println()
 
-   var input = " "
+    var input = " "
 
     var input_correct = false
 
-    while (!input_correct){
+    while (!input_correct) {
 
       val takeinput = readLine("Your guess is: ").toUpperCase()
 
-      if (takeinput.length > 4 || takeinput.length < 4){
+      if (takeinput.length > 4 || takeinput.length < 4) {
         println(s"Your guess code should be 4 characters, BUT YOURS IS ${takeinput.length}. Try again")
         println()
       } else {
 
         val pass = new ListBuffer[String]
-        takeinput.foreach(ch => if(('A' to 'Z').contains(ch)){pass += "yes"})
-        if(pass.result().length  == 4){
+        takeinput.foreach(ch => if ((List('R','B','Y','O','P','G')).contains(ch)) {
+          pass += "yes"
+        })
+        if (pass.result().length == 4) {
           input = takeinput
           input_correct = true
         } else {
-          println("Every single character of your code must be a letter. Try again")
+          println("Every single character of your code must be a bla. Try again")
           println()
         }
 
       }
 
     }
-  input
 
+    var output = new ListBuffer[Colour]
+
+    for (i <- Range(0,4)) {
+      input(i) match {
+
+        case 'R' => output = output += new Colour("Red")
+        case 'B' => output = output += new Colour("Blue")
+        case 'Y' => output = output += new Colour("Yellow")
+        case 'O' => output = output += new Colour("Orange")
+        case 'P' => output = output += new Colour("Purple")
+        case 'G' => output = output += new Colour("Green")
+        case _ => output = output += null
+      }
+
+    }
+    output
   }
-  //sendInput()
 }
 
 object testguess extends App{

@@ -9,7 +9,7 @@ object MastermindDriver {
 //    g = Factory.getInstance(classOf[Game], false)
 //    g.runGames
 
-    var g: Game = new TheGame()
+    var g: Game = new TheGame(true)
     g.runGames
 
 

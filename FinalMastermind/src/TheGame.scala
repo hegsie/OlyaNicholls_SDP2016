@@ -20,7 +20,7 @@ class TheGame extends Game {
   }
 
   def ShowCode() ={
-    if (showCode == true) gr.codeString = gr.code
+    if (showCode == true) gr.codestring = gr.code
   }
 
 }

@@ -12,7 +12,7 @@ import scala.collection.mutable.ListBuffer
 
 trait Pegs {
 
-  def checkingCode(code: String, guess: String): String = {
+  def checkingCode(code: ListBuffer[Colour], guess: ListBuffer[Colour]): String = {
 
     var codeCopy = code
     var pegInfo = new ListBuffer[String]
@@ -20,13 +20,13 @@ trait Pegs {
     for (i <- Range(0, 4)) {
       if (guess(i) == codeCopy(i)) {
         pegInfo = pegInfo :+ "Black"
-        codeCopy = codeCopy.replace(codeCopy(i).toString, "x")
+        guess(i).matched = true
       }
     }
     for (i <- Range(0, 4)) {
-      if (codeCopy.contains(guess(i))) {
+      if (!guess(i).matched && codeCopy.contains(guess(i))) { //reads "if not matched and "
         pegInfo = pegInfo :+ "White"
-        codeCopy = codeCopy.replace(guess(i).toString, "x")
+
       }
     }
 
