@@ -12,8 +12,9 @@ trait Shape1 {
 
 }
 
+
 case class Circle (radius: Double) extends Shape1{
-  def sides = 0
+  def sides = 1
   def area = Pi * pow(radius,2)
   def perimeter = 2*Pi*radius
 }
@@ -27,11 +28,13 @@ case class Rectangle (side1: Double, side2:Double )extends Shape1{
 }
 
 case class Square (side: Double )extends Shape1{
-  def sides  = 2
+  def sides  = 4
   def perimeter = side*4
   def area = side * side
 
 }
+
+
 
 object MyShapes extends App{
 

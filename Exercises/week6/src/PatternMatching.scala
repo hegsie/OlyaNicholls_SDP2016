@@ -1,4 +1,4 @@
-import AtomicScala.AtomicTest1._
+import AtomicScala.AtomicTest._
 
 
 object PatternMatching extends App{

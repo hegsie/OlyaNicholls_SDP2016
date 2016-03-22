@@ -2,46 +2,62 @@
   * Created by ONicholls on 26/02/2016.
   */
 
-// A sealed trait can be extended only in the same file as its declaration.
+/*
+i. Make Shape a sealed trait.
+ii. Then write a singleton object called Draw with an apply method that takes
+a Shape as an argument and returns a description of it on the console.
+ */
 
 import scala.math._
 
-sealed trait Shape3 {
+
+ sealed trait Shape3 {
+
   def sides: Int
   def perimeter: Double
   def area: Double
+
 }
 
-
-case class C (radius: Double) extends Shape3{
-
-  def sides = 0
+case class Circle3 (radius: Double) extends Shape3{
+  def sides = 1
   def area = Pi * pow(radius,2)
   def perimeter = 2*Pi*radius
 }
 
 
-case class R (side1: Double, side2:Double )extends Shape3{
+trait Rectangular3 extends Shape3{
+  def side1:Double
+  def side2: Double
   def sides()  = 4
   def perimeter = side1*2 + side2*2
   def area = side1 * side2
 
 }
+ case class Rectangle3 (side1: Double, side2:Double ) extends Rectangular3 {
+}
 
-class Rec (side1: Double, side2:Double ) extends R(side1,side2) {
-  override def sides  = 4
-  override def perimeter = side1*2 + side2*2
-  override def area = side1 * side2
+case class Square3 (side: Double )extends Rectangular3 {
+  def side1:Double = side
+  def side2: Double = side
 
 }
 
-class Sq (side1: Double, side2:Double )extends R (side1, side2){
-  override def sides()  = super.sides()
-  override def perimeter = side1*4
-  override def area = pow(side1,2)
-}
+object Draw extends App{
+  def apply(shape: Shape3): Unit = shape match {
+    case Rectangle3(side1,side2) =>
+      println(s"A rectangle of width $side1 cm and height  $side2 cm ")
+    case Square3(side) =>
+      println(s"A square with a side $side cm")
+    case Circle3(radius) =>
+      println(s"A circle of radius $radius cm")
 
-case class Draw (shape: Any) {
-  def apply(shape:Any)
+  }
+
+
+  apply(Square3(5))
+  apply(Circle3(5))
+  apply(Rectangle3(5,10))
+
 
 }

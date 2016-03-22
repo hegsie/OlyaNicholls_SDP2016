@@ -1,5 +1,5 @@
 package classarguments
-import AtomicScala.AtomicTest1._
+import AtomicScala.AtomicTest._
 
 class FlexibleFamily(mum: String, dad: String, kids:String*){
 
