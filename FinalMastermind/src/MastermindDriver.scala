@@ -1,21 +1,13 @@
-
+import com.google.inject.{Guice}
 
 
 object MastermindDriver {
   def main(args: Array[String]) {
 
-//    var g: Game = Factory.getInstance(classOf[Game], true)
-//    g.runGames
-//    g = Factory.getInstance(classOf[Game], false)
-//    g.runGames
+    val injector = Guice.createInjector(new DependencyModule());
 
-    var g: Game = new TheGame(true)
-    g.runGames
+    val g1 = injector.getInstance(classOf[Game])
 
-
-
-
-
-
+    g1.runGames
   }
 }
